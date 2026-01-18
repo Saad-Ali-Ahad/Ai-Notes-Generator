@@ -1,0 +1,33 @@
+{
+  "name": "ai-notes-generator",
+  "version": "1.0.0",
+  "description": "AI-powered notes generator for educational content",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/index.js",
+    "dev": "nodemon --watch src --ext ts --exec ts-node-esm src/index.ts"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "docx": "^9.5.0",
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2",
+    "groq-sdk": "^0.3.3",
+    "mammoth": "^1.9.0",
+    "marked": "^9.1.6",
+    "multer": "^1.4.5-lts.1",
+    "pdf-parse": "^1.1.1",
+    "puppeteer": "^24.35.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.22",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^20.19.29",
+    "@types/pdf-parse": "^1.1.5",
+    "nodemon": "^3.1.10",
+    "ts-node": "^1.7.1",
+    "typescript": "^5.8.3"
+  }
+}
