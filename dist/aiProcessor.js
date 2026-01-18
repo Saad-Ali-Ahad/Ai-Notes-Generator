@@ -12,7 +12,8 @@ export async function askGemini(Prompt) {
             generationConfig: {
                 temperature: 1,
                 topP: 0.95,
-                topK: 64,
+                topK: 40,
+                maxOutputTokens: 700,
             },
         });
         const result = await chatSession.sendMessage(Prompt);
